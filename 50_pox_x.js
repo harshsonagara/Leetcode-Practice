@@ -14,3 +14,5 @@ var temp = function (x, n) {
     if (n % 2 == 0) return ans * ans;
     return ans * ans * x;
 }
+
+console.log(myPow(2, 10));
