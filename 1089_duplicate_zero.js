@@ -8,21 +8,21 @@ var duplicateZeros = function (arr) {
         if (arr[i] == 0) zeros++;
     }
 
-    let i = arr.length - 1; //7 , 6 , 5 , 4
-    let j = (arr.length - 1) + zeros; // 10 , 9 , 8 , 7 ,6 , 5
+    let i = arr.length - 1;
+    let j = (arr.length - 1) + zeros;
 
     while (i != j) {
-        if (j < arr.length) { // no , no , no , yes
-            arr[j] = arr[i];  // 
+        if (j < arr.length) {
+            arr[j] = arr[i];
         }
-        j--  // 9 , 7 , 6 , 5
-        if (arr[i] == 0) { // yes , no ,no
-            if (j < arr.length) { // no 
+        j--
+        if (arr[i] == 0) {
+            if (j < arr.length) {
                 arr[j] = arr[i];
             }
-            j-- // 8
+            j--
         }
-        i-- // 6 , 5 , 4
+        i--
     }
     return arr;
 }
